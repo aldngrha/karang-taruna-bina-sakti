@@ -1,0 +1,113 @@
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+  <!-- Sidebar - Brand -->
+  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <div class="sidebar-brand-icon">
+      <img src="{{ url('frontend/images/640px-Lambang_Kabupaten_Lampung_Tengah.png') }}" alt="" width="40" />
+    </div>
+    <div class="sidebar-brand-text">Karang Taruna <br> Bina Sakti</div>
+  </a>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider my-0">
+
+  <!-- Nav Item - Dashboard -->
+  <li class="nav-item active">
+    <a class="nav-link" href="index.html">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Dashboard</span></a>
+  </li>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider">
+
+  <!-- Heading -->
+  <div class="sidebar-heading">
+    Posts
+  </div>
+
+  <!-- Nav Item - Tables -->
+  <li class="nav-item">
+    <a class="nav-link" href="tables.html">
+      <i class="fas fa-image"></i>
+      <span>Slide</span></a>
+  </li>
+
+  <!-- Nav Item - Tables -->
+  <li class="nav-item">
+    <a class="nav-link" href="tables.html">
+      <i class="fas fa-newspaper"></i>
+      <span>Artikel</span></a>
+  </li>
+
+  <!-- Nav Item - Tables -->
+  <li class="nav-item">
+    <a class="nav-link" href="tables.html">
+      <i class="fas fa-images"></i>
+      <span>Galeri</span></a>
+  </li>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider">
+
+  <!-- Heading -->
+  <div class="sidebar-heading">
+    Pages
+  </div>
+
+  <!-- Nav Item - Profil Collapse Menu -->
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+      aria-controls="collapseTwo">
+      <i class="fas fa-user fa-cog"></i>
+      <span>Profil Karang Taruna</span>
+    </a>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <h6 class="collapse-header">Profil Karang Taruna :</h6>
+        <a class="collapse-item" href="buttons.html">Visi dan Misi</a>
+        <a class="collapse-item" href="cards.html">Sejarah</a>
+      </div>
+    </div>
+  </li>
+
+  <!-- Nav Item - Strukturisasi Collapse Menu -->
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true"
+      aria-controls="collapseUtilities">
+      <i class="fas fa-sitemap"></i>
+      <span>Strukturisasi</span>
+    </a>
+    <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <h6 class="collapse-header">Strukturisasi :</h6>
+        <a class="collapse-item" href="utilities-color.html">Struktur Organisasi</a>
+        <a class="collapse-item" href="utilities-border.html">Jumlah Anggota</a>
+      </div>
+    </div>
+  </li>
+
+  <!-- Nav Item - Strukturisasi Collapse Menu -->
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse" aria-expanded="true"
+      aria-controls="collapseUtilities">
+      <i class="fas fa-calendar-check"></i>
+      <span>Kegiatan</span>
+    </a>
+    <div id="collapse" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <h6 class="collapse-header">Kegiatan :</h6>
+        <a class="collapse-item" href="utilities-color.html">Struktur Organisasi</a>
+        <a class="collapse-item" href="utilities-border.html">Jumlah Anggota</a>
+      </div>
+    </div>
+  </li>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider d-none d-md-block">
+
+  <!-- Sidebar Toggler (Sidebar) -->
+  <div class="text-center d-none d-md-inline">
+    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+  </div>
+</ul>

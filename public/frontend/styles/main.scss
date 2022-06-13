@@ -1,0 +1,191 @@
+body {
+  font-family: "Poppins", sans-serif;
+  color: #191919;
+}
+
+.btn-primary {
+  background: #191919;
+  border: none;
+
+  &:hover {
+    background: #4e4e4e;
+  }
+}
+
+// Title
+
+.title {
+  padding: auto;
+}
+
+.title-two {
+  background: #191919;
+  margin-top: -8px;
+  padding: 70px 0 70px 0;
+
+  p {
+    font-weight: 100;
+  }
+}
+
+.title-three {
+  .home {
+    color: #191919 !important;
+    font-size: 22px;
+
+    &:hover {
+      color: #161616;
+    }
+  }
+}
+
+.section-article {
+  h2 {
+    margin: 50px 0 50px 0;
+    text-transform: uppercase;
+    font-size: 28px;
+  }
+}
+
+.section-gallery {
+  margin: 50px 0 50px 0;
+
+  h2 {
+    margin: 50px 0 50px 0;
+    text-transform: uppercase;
+    font-size: 28px;
+  }
+}
+
+.footer-section {
+  background: #191919;
+  padding-top: 75px;
+
+  .footer-left {
+    margin-bottom: 30px;
+
+    .footer-logo {
+      h4 {
+        color: #ffffff;
+      }
+
+      img {
+        height: 30px !important;
+      }
+
+      a {
+        display: inline-block;
+      }
+    }
+
+    ul {
+      margin-left: -40px;
+      li {
+        list-style: none;
+        color: #b2b2b2;
+        font-size: 16px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  .footer-widget {
+    // margin-bottom: 30px;
+    h5 {
+      color: #ffffff;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    ul {
+      margin-left: -40px;
+      li {
+        a {
+          line-height: 36px;
+          font-size: 16px;
+          color: #b2b2b2;
+        }
+      }
+    }
+  }
+}
+
+.copyright-reserved {
+  border-top: 1px solid #303030;
+  padding: 15px 0;
+  margin-top: 45px;
+
+  .copyright-text {
+    float: left;
+    font-size: 16px;
+    color: #b2b2b2;
+  }
+}
+
+.section-vision {
+  margin: 50px 0 50px 0;
+  h3 {
+    text-transform: uppercase;
+  }
+
+  .bg-light {
+    margin-right: -20px;
+  }
+
+  .card {
+    a {
+      .res {
+        width: 115%;
+      }
+    }
+  }
+}
+
+.section-post {
+  margin: 50px 0 50px 0;
+  h3 {
+    text-transform: uppercase;
+  }
+
+  .post-article {
+    margin-top: 10px;
+    color: #919191;
+  }
+
+  .more-article {
+    margin: 40px 0 40px 0;
+
+    h4 {
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .section-vision {
+    iframe {
+      width: 370px;
+      height: 1160px;
+    }
+
+    .card {
+      a {
+        .res {
+          width: 100%;
+        }
+      }
+    }
+
+    .bg-light {
+      margin-right: 0px;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+}
