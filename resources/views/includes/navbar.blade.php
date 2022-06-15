@@ -20,11 +20,13 @@
           Lampung
         </p>
       </div>
+      @guest
       <div class="col-lg-2">
         <a href="{{ route('login') }}" class="btn btn-light mt-4">
           <i class="fa fa-user mr-2"></i>Login Admin
         </a>
       </div>
+      @endguest
     </div>
   </div>
 </div>
