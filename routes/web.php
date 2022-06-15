@@ -10,6 +10,7 @@ use App\Http\Controllers\SignController;
 use App\Http\Controllers\SinglePostController;
 use App\Http\Controllers\StructureController;
 use App\Http\Controllers\VisionController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,8 +40,11 @@ Route::get("/single-post", [SinglePostController::class, "index"])->name(
 
 Route::prefix("admin")
     ->namespace("Admin")
+    ->middleware(['auth', 'admin'])
     ->group(function () {
         Route::get("/", [DashboardController::class, "index"])->name(
             "dashboard"
         );
     });
+
+Auth::routes(['verify' => true]);

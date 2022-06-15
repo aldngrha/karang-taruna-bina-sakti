@@ -21,9 +21,9 @@
         </p>
       </div>
       <div class="col-lg-2">
-        <button class="btn btn-light mt-4">
+        <a href="{{ route('login') }}" class="btn btn-light mt-4">
           <i class="fa fa-user mr-2"></i>Login Admin
-        </button>
+        </a>
       </div>
     </div>
   </div>
