@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateArticlesTable extends Migration
+class CreateVisionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateArticlesTable extends Migration
      */
     public function up()
     {
-        Schema::create("articles", function (Blueprint $table) {
+        Schema::create("visions", function (Blueprint $table) {
             $table->bigIncrements("id");
-            $table->string("title");
-            $table->string("slug");
-            $table->text("image");
-            $table->longText("post");
-            $table->string("written");
+            $table->longText("vision");
+            $table->longText("mission");
             $table->softDeletes();
             $table->timestamps();
         });
@@ -32,6 +29,6 @@ class CreateArticlesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists("articles");
+        Schema::dropIfExists("visions");
     }
 }
