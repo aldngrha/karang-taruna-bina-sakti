@@ -13,6 +13,8 @@
   <!-- Topbar -->
   @include('includes.navbar-alternate')
 
+  @yield('content')
+
   @include('includes.script')
 </body>
 
