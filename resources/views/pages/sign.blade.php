@@ -10,7 +10,7 @@
           <h3 class="mb-4">Pendaftaran</h3>
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLScoodbBpmOaQLLzR6hDy-QNarL70ZuiKnEtoIvmalrl1pLT_Q/viewform?embedded=true"
-            width="640" height="1095" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>
+            width="640" height="1495" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>
         </div>
         <div class="col-md-4 col-sm-6">
           <h3 class="text-center bg-light p-2">Galeri Foto</h3>

@@ -155,7 +155,7 @@ body {
 @media only screen and (max-width: 600px) {
   .section-vision iframe {
     width: 370px;
-    height: 1160px;
+    height: 1600px;
   }
   .section-vision .card a .res {
     width: 100%;
