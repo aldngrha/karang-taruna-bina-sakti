@@ -1,11 +1,15 @@
 @extends('layouts.admin')
 
-@section('content')
-<div class="container-fluid">
+@section('title')
+Ubah Gallery
+@endsection
 
+@section('content')
+<!-- Begin Page Content -->
+<div class="container-fluid">
   <!-- Page Heading -->
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Tambah Slider</h1>
+    <h1 class="h3 mb-0 text-gray-800">Ubah Slider</h1>
   </div>
 
   @if ($errors->any())
@@ -20,7 +24,8 @@
 
   <div class="card shadow">
     <div class="card-body">
-      <form action="{{ route('slider.store') }}" method="POST" enctype="multipart/form-data">
+      <form action="{{ route('slider.update', $item->id) }}" method="POST" enctype="multipart/form-data">
+        @method("PUT")
         @csrf
         <div class="form-group">
           <label>Gambar</label>
@@ -30,11 +35,11 @@
             <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Simpan</button>
+        <button type="submit" class="btn btn-primary btn-block">Ubah</button>
       </form>
     </div>
   </div>
-  <!-- /.container-fluid -->
-
 </div>
+<!-- /.container-fluid -->
+
 @endsection

@@ -69,7 +69,11 @@ class SliderController extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = Slider::findOrFail($id);
+
+        return view("pages.admin.slider.edit", [
+            "item" => $item,
+        ]);
     }
 
     /**
@@ -81,7 +85,16 @@ class SliderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+
+        $item = Slider::findOrFail($id);
+        $data["image"] = $request
+            ->file("image")
+            ->store("assets/slider", "public");
+
+        $item->update($data);
+
+        return redirect()->route("slider.index");
     }
 
     /**
