@@ -13,7 +13,7 @@
 
   <!-- Nav Item - Dashboard -->
   <li class="nav-item active">
-    <a class="nav-link" href="index.html">
+    <a class="nav-link" href="{{ route('dashboard') }}">
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Dashboard</span></a>
   </li>
@@ -28,14 +28,14 @@
 
   <!-- Nav Item - Tables -->
   <li class="nav-item">
-    <a class="nav-link" href="tables.html">
+    <a class="nav-link" href="{{ route('slider.index') }}">
       <i class="fas fa-image"></i>
       <span>Slide</span></a>
   </li>
 
   <!-- Nav Item - Tables -->
   <li class="nav-item">
-    <a class="nav-link" href="tables.html">
+    <a class="nav-link" href="">
       <i class="fas fa-newspaper"></i>
       <span>Artikel</span></a>
   </li>

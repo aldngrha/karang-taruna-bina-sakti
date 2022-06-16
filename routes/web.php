@@ -40,11 +40,12 @@ Route::get("/single-post", [SinglePostController::class, "index"])->name(
 
 Route::prefix("admin")
     ->namespace("Admin")
-    ->middleware(['auth', 'admin'])
+    ->middleware(["auth", "admin"])
     ->group(function () {
         Route::get("/", [DashboardController::class, "index"])->name(
             "dashboard"
         );
+        Route::resource("slider", "SliderController");
     });
 
-Auth::routes(['verify' => true]);
+Auth::routes(["verify" => true]);
