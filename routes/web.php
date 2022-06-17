@@ -49,6 +49,7 @@ Route::prefix("admin")
         Route::resource("article", "ArticleController");
         Route::resource("gallery", "GalleryController");
         Route::resource("vision", "VisionController");
+        Route::resource("history", "HistoryController");
     });
 
 Auth::routes(["verify" => true]);
