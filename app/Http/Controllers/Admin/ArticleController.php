@@ -85,7 +85,7 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ArticleRequest $request, $id)
     {
         $data = $request->all();
         $data["slug"] = Str::slug($request->title);
