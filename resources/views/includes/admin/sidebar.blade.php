@@ -35,7 +35,7 @@
 
   <!-- Nav Item - Tables -->
   <li class="nav-item">
-    <a class="nav-link" href="">
+    <a class="nav-link" href="{{ route('article.index') }}">
       <i class="fas fa-newspaper"></i>
       <span>Artikel</span></a>
   </li>
