@@ -42,7 +42,7 @@
 
   <!-- Nav Item - Tables -->
   <li class="nav-item">
-    <a class="nav-link" href="tables.html">
+    <a class="nav-link" href="{{ route('gallery.index') }}">
       <i class="fas fa-images"></i>
       <span>Galeri</span></a>
   </li>
