@@ -16,12 +16,20 @@
 <script src="{{ url('backend/js/demo/chart-pie-demo.js') }}"></script>
 <script src="https://cdn.ckeditor.com/ckeditor5/32.0.0/classic/ckeditor.js"></script>
 <script>
-  ClassicEditor
+    ClassicEditor
         .create( document.querySelector( '.ckeditor' ) )
         .then( editor => {
             console.log( editor );
         })
         .catch( error => {
             console.error( error );
+        } );
+    ClassicEditor
+        .create( document.querySelector( '.ckeditorr' ) )
+        .then( editor => {
+        console.log( editor );
+        })
+        .catch( error => {
+        console.error( error );
         } );
 </script>
