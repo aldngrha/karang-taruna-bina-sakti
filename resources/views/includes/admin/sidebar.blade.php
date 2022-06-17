@@ -66,7 +66,7 @@
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Profil Karang Taruna :</h6>
         <a class="collapse-item" href="{{ route('vision.index') }}">Visi dan Misi</a>
-        <a class="collapse-item" href="cards.html">Sejarah</a>
+        <a class="collapse-item" href="{{ route('history.index') }}">Sejarah</a>
       </div>
     </div>
   </li>
