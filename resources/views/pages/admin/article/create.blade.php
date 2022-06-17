@@ -35,7 +35,7 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="post">Penulis</label>
+          <label for="post">Tentang</label>
           <textarea name="post" class="ckeditor form-control" rows="10">{{ old("post") }}</textarea>
         </div>
         <div class="form-group">
