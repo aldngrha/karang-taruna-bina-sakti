@@ -9,7 +9,7 @@ class Article extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ["title" . "slug", "image", "post", "written"];
+    protected $fillable = ["title", "slug", "image", "post", "written"];
 
     protected $hidden = [];
 }
