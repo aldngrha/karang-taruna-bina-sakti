@@ -47,6 +47,7 @@ Route::prefix("admin")
         );
         Route::resource("slider", "SliderController");
         Route::resource("article", "ArticleController");
+        Route::resource("gallery", "GalleryController");
     });
 
 Auth::routes(["verify" => true]);
