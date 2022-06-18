@@ -28,7 +28,7 @@ Ubah Gallery
         @method('PUT')
         @csrf
         <div class="form-group">
-          <label for="title">Title</label>
+          <label for="title">Judul</label>
           <input type="text" class="form-control" name="title" placeholder="Judul Artikel" value="{{ $item->title }}">
         </div>
         <div class="form-group">
