@@ -50,6 +50,7 @@ Route::prefix("admin")
         Route::resource("gallery", "GalleryController");
         Route::resource("vision", "VisionController");
         Route::resource("history", "HistoryController");
+        Route::resource("structure", "OrganizationalStructureController");
     });
 
 Auth::routes(["verify" => true]);
