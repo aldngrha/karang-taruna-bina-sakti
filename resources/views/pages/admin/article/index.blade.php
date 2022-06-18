@@ -20,7 +20,7 @@
               <thead>
                 <tr>
                   <th scope="col">ID</th>
-                  <th scope="col">Title</th>
+                  <th scope="col">Judul</th>
                   <th scope="col">Gambar</th>
                   <th scope="col">Penulis</th>
                   <th scope="col">Action</th>
