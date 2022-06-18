@@ -81,7 +81,7 @@
     <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Strukturisasi :</h6>
-        <a class="collapse-item" href="utilities-color.html">Struktur Organisasi</a>
+        <a class="collapse-item" href="{{ route('structure.index') }}">Struktur Organisasi</a>
         <a class="collapse-item" href="utilities-border.html">Jumlah Anggota</a>
       </div>
     </div>
