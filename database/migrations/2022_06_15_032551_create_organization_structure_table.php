@@ -13,7 +13,9 @@ class CreateOrganizationStructureTable extends Migration
      */
     public function up()
     {
-        Schema::create("organizational_structure", function (Blueprint $table) {
+        Schema::create("organizational_structures", function (
+            Blueprint $table
+        ) {
             $table->bigIncrements("id");
             $table->text("image");
             $table->softDeletes();
