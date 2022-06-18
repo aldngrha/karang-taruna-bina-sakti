@@ -108,6 +108,6 @@ class GalleryController extends Controller
         $item = Gallery::findOrFail($id);
         $item->delete();
 
-        return redirect()->route("slider.index");
+        return redirect()->route("gallery.index");
     }
 }
