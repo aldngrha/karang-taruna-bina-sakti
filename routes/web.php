@@ -24,6 +24,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route user
+
 Route::get("/", [HomeController::class, "index"])->name("home");
 Route::get("/schedule", [ScheduleController::class, "index"])->name("schedule");
 Route::get("/sign", [SignController::class, "index"])->name("sign");
@@ -37,6 +39,8 @@ Route::get("/program", [ProgramController::class, "index"])->name("program");
 Route::get("/single-post", [SinglePostController::class, "index"])->name(
     "single-post"
 );
+
+// Route admin
 
 Route::prefix("admin")
     ->namespace("Admin")
