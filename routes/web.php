@@ -51,6 +51,8 @@ Route::prefix("admin")
         Route::resource("vision", "VisionController");
         Route::resource("history", "HistoryController");
         Route::resource("structure", "OrganizationalStructureController");
+
+        Route::resource("program", "ProgramController");
     });
 
 Auth::routes(["verify" => true]);
