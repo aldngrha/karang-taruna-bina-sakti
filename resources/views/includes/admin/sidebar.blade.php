@@ -12,7 +12,7 @@
   <hr class="sidebar-divider my-0">
 
   <!-- Nav Item - Dashboard -->
-  <li class="nav-item active">
+  <li class="nav-item {{ request()->is('admin') ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('dashboard') }}">
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Dashboard</span></a>
@@ -27,21 +27,21 @@
   </div>
 
   <!-- Nav Item - Tables -->
-  <li class="nav-item">
+  <li class="nav-item {{ request()->is('admin/slider*') ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('slider.index') }}">
       <i class="fas fa-image"></i>
       <span>Slide</span></a>
   </li>
 
   <!-- Nav Item - Tables -->
-  <li class="nav-item">
+  <li class="nav-item {{ request()->is('admin/article*') ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('article.index') }}">
       <i class="fas fa-newspaper"></i>
       <span>Artikel</span></a>
   </li>
 
   <!-- Nav Item - Tables -->
-  <li class="nav-item">
+  <li class="nav-item {{ request()->is('admin/gallery*') ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('gallery.index') }}">
       <i class="fas fa-images"></i>
       <span>Galeri</span></a>
@@ -56,7 +56,7 @@
   </div>
 
   <!-- Nav Item - Profil Collapse Menu -->
-  <li class="nav-item">
+  <li class="nav-item {{ request()->is('admin/vision*', 'admin/history*') ? 'active' : '' }}">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
       aria-controls="collapseTwo">
       <i class="fas fa-user fa-cog"></i>
@@ -72,14 +72,14 @@
   </li>
 
   <!-- Nav Item - Strukturisasi Collapse Menu -->
-  <li class="nav-item">
+  <li class="nav-item {{ request()->is('admin/structure*') ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('structure.index') }}">
       <i class="fas fa-sitemap"></i>
       <span>Struktur Karang Taruna</span></a>
   </li>
 
   <!-- Nav Item - Strukturisasi Collapse Menu -->
-  <li class="nav-item">
+  <li class="nav-item {{ request()->is('admin/agenda*', 'admin/program*') ? 'active' : '' }}">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse" aria-expanded="true"
       aria-controls="collapseUtilities">
       <i class="fas fa-calendar-check"></i>
