@@ -6,9 +6,11 @@
   <!-- Page Heading -->
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Visi dan Misi</h1>
+    @if ($items->isEmpty())
     <a href="{{ route('vision.create') }}" class="btn btn-primary shadow-sm">
       <i class="fas fa-plus fa-sm text-white"></i> Tambah Visi dan Misi
     </a>
+    @endif
   </div>
 
   <div class="row">
