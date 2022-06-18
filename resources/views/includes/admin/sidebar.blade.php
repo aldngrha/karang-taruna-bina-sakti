@@ -88,7 +88,7 @@
     <div id="collapse" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Kegiatan :</h6>
-        <a class="collapse-item" href="utilities-color.html">Agenda</a>
+        <a class="collapse-item" href="{{ route('agenda.index') }}">Agenda</a>
         <a class="collapse-item" href="{{ route('program.index') }}">Program Kerja</a>
       </div>
     </div>

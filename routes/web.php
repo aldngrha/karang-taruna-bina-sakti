@@ -51,7 +51,7 @@ Route::prefix("admin")
         Route::resource("vision", "VisionController");
         Route::resource("history", "HistoryController");
         Route::resource("structure", "OrganizationalStructureController");
-
+        Route::resource("agenda", "AgendaController");
         Route::resource("program", "ProgramController");
     });
 
