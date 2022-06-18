@@ -7,9 +7,8 @@
       <div class="row">
         <div class="col-md-8 col-sm-6 mb-4">
           <h3 class="mb-4">Jumlah Anggota</h3>
-          <img
-            src="https://data03.123doks.com/thumbv2/123dok/002/260/2260465/1.918.227.692.473.865/tabel-jumlah-anggota-idea-berdasarkan-sektor.webp"
-            alt="" style="width: 700px" />
+          <iframe style="width: 100%"
+            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQlo9WrJgLZxBK87LUKx07yjpI4ts3op9ZYmo5XhrYv-M0RB5e6-uE_LC4ZtsoHSNXpItopDQfIyuaM/pubhtml?gid=1207954932&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
         </div>
         <div class="col-md-4 col-sm-6">
           <h3 class="text-center bg-light p-2">Galeri Foto</h3>
