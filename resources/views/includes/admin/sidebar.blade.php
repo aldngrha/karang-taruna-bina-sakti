@@ -73,18 +73,9 @@
 
   <!-- Nav Item - Strukturisasi Collapse Menu -->
   <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true"
-      aria-controls="collapseUtilities">
+    <a class="nav-link" href="{{ route('structure.index') }}">
       <i class="fas fa-sitemap"></i>
-      <span>Strukturisasi</span>
-    </a>
-    <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-      <div class="bg-white py-2 collapse-inner rounded">
-        <h6 class="collapse-header">Strukturisasi :</h6>
-        <a class="collapse-item" href="{{ route('structure.index') }}">Struktur Organisasi</a>
-        <a class="collapse-item" href="utilities-border.html">Jumlah Anggota</a>
-      </div>
-    </div>
+      <span>Struktur Karang Taruna</span></a>
   </li>
 
   <!-- Nav Item - Strukturisasi Collapse Menu -->
