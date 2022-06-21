@@ -12,6 +12,7 @@ class StructureController extends Controller
     {
         $structures = OrganizationalStructure::all();
         $galleries = Gallery::all();
+
         return view("pages.structure", [
             "structures" => $structures,
             "galleries" => $galleries,
