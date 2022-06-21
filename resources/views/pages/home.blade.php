@@ -36,23 +36,23 @@
       <div class="section-article-card row">
         @foreach ($articles as $article)
         <div class="col-sm-6 col-md-4 mb-3">
-          <div class="card"">
+          <div class="card">
             <img class=" card-img-top" src="{{ Storage::url($article->image) }}" alt="Card image cap"
-            style="height: 250px" />
-          <div class="card-body">
-            <h5 class="card-title">{{ substr($article->title, 0, 26) }}</h5>
-            <p class="card-text">
-              {!! substr($article->post, 0, 100) !!}
-            </p>
-            <a href="{{ route('single-post', $article->slug) }}" class="btn btn-primary">Lihat Selengkapnya</a>
+              style="height: 250px" />
+            <div class="card-body">
+              <h5 class="card-title">{{ substr($article->title, 0, 26) }}</h5>
+              <p class="card-text">
+                {!! substr($article->post, 0, 100) !!}
+              </p>
+              <a href="{{ route('single-post', $article->slug) }}" class="btn btn-primary">Lihat Selengkapnya</a>
+            </div>
           </div>
         </div>
+        @endforeach
       </div>
-      @endforeach
-    </div>
-    <div class="d-flex justify-content-center mt-5">
-      {{ $articles->links() }}
-    </div>
+      <div class="d-flex justify-content-center mt-5">
+        {{ $articles->links() }}
+      </div>
     </div>
   </section>
 

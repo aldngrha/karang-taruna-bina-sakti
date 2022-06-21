@@ -21,11 +21,12 @@
         <div class="row">
           <div class="col-md-12 col-sm-6 mb-3">
             <div class="owl-carousel owl-theme">
-              @foreach ($articles as $post)
+              @foreach ($articles-> as $post)
               <div class="card">
-                <img class="card-img-top" src="{{ Storage::url($post->image) }}" alt="Card image cap" />
+                <img class="card-img-top" src="{{ Storage::url($post->image) }}" alt="Card image cap"
+                  style="height: 150px" />
                 <div class="card-body">
-                  <h5 class="card-title">{{ $post->title }}</h5>
+                  <h5 class="card-title">{{ substr($post->title, 0, 19) }}</h5>
                   <p class="card-text">
                     {!! substr($post->post, 0, 100) !!}
                   </p>

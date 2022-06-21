@@ -11,4 +11,5 @@
   crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="{{ url('frontend/libraries/owlcarousel/owl.carousel.min.css') }}" />
 <link rel="stylesheet" href="{{ url('frontend/libraries/owlcarousel/owl.theme.default.min.css') }}" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 <link rel="stylesheet" href="{{ url('frontend/styles/main.css') }}" />
