@@ -2,12 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
 
 class SinglePostController extends Controller
 {
-    public function index(Request $request)
+    public function index(Request $request, $slug)
     {
-        return view("pages.single-post");
+        $article = Article::where("slug", $slug)->firstOrFail();
+        $articles = Article::all();
+
+        return view("pages.single-post", [
+            "article" => $article,
+            "articles" => $articles,
+        ]);
     }
 }

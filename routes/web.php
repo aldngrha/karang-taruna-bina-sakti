@@ -36,7 +36,7 @@ Route::get("/vision", [VisionController::class, "index"])->name("vision");
 Route::get("/member", [MemberController::class, "index"])->name("member");
 Route::get("/history", [HistoryController::class, "index"])->name("history");
 Route::get("/program", [ProgramController::class, "index"])->name("program");
-Route::get("/single-post", [SinglePostController::class, "index"])->name(
+Route::get("/single-post/{slug}", [SinglePostController::class, "index"])->name(
     "single-post"
 );
 

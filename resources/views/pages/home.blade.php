@@ -34,8 +34,8 @@
     <div class="container">
       <h2 class="text-center p-3">Artikel Karang Taruna</h2>
       <div class="section-article-card row">
+        @foreach ($articles as $article)
         <div class="col-sm-6 col-md-4 mb-3">
-          @foreach ($articles as $article)
           <div class="card">
             <img class="card-img-top" src="{{ Storage::url($article->image) }}" alt="Card image cap" />
             <div class="card-body">
@@ -46,8 +46,11 @@
               <a href="{{ route('single-post', $article->slug) }}" class="btn btn-primary">Lihat Selengkapnya</a>
             </div>
           </div>
-          @endforeach
         </div>
+        @endforeach
+      </div>
+      <div class="d-flex justify-content-center">
+        {{ $articles->links() }}
       </div>
     </div>
   </section>
@@ -57,9 +60,9 @@
       <h2 class="text-center">Galeri Foto</h2>
       <div class="owl-carousel owl-theme">
         @foreach ($galleries as $gallery)
-        <div class="card">
+        <div class="card" style="height: 200px">
           <a href="{{ Storage::url($gallery->image) }}" class="fancybox" data-fancybox="gallery1">
-            <img src="{{ Storage::url($gallery->image) }}" class="card-img-top" alt="..." />
+            <img src="{{ Storage::url($gallery->image) }}" class="card-img-top" alt="..." style="height: 200px" />
           </a>
         </div>
         @endforeach

@@ -4,7 +4,7 @@ body {
 }
 
 .btn-primary {
-    background: #191919;
+    background: #191919 !important;
     border: none;
 
     &:hover {
@@ -160,6 +160,33 @@ body {
         h4 {
             margin-bottom: 20px;
             text-transform: uppercase;
+        }
+    }
+}
+
+.pagination {
+    li {
+        a {
+            color: #191919;
+        }
+        span {
+            color: #191919;
+        }
+    }
+
+    .active {
+        a,
+        &:focus,
+        &:hover {
+            background-color: #191919 !important;
+            border-color: #191919 !important;
+        }
+
+        span,
+        &:focus,
+        &:hover {
+            background-color: #191919 !important;
+            border-color: #191919 !important;
         }
     }
 }

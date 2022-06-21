@@ -10,42 +10,17 @@
           <h5 class="mb-4">Agenda yang akan dilakukan pada tahun ini :</h5>
           <div class="container">
             <div class="row">
+              @foreach ($agendas as $agenda)
               <div class="col-md-6 col-sm-6">
-                <div class="card text-center mb-3">
-                  <img class="card-img-top"
-                    src="https://images.unsplash.com/photo-1570780728980-63f5a30a1393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-                    alt="Card image cap" />
+                <div class="card text-center mb-3" style="width: 350px;">
+                  <img class="card-img-top" src="{{ Storage::url($agenda->image) }}" alt="Card image cap"
+                    style="height: 200px" />
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                  </div>
-                </div>
-                <div class="card text-center mb-3">
-                  <img class="card-img-top"
-                    src="https://images.unsplash.com/photo-1570780728980-63f5a30a1393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-                    alt="Card image cap" />
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <h5 class="card-title">{{ $agenda->title }}</h5>
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-sm-6">
-                <div class="card text-center mb-3">
-                  <img class="card-img-top"
-                    src="https://images.unsplash.com/photo-1570780728980-63f5a30a1393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-                    alt="Card image cap" />
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                  </div>
-                </div>
-                <div class="card text-center mb-3">
-                  <img class="card-img-top"
-                    src="https://images.unsplash.com/photo-1570780728980-63f5a30a1393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-                    alt="Card image cap" />
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                  </div>
-                </div>
-              </div>
+              @endforeach
             </div>
           </div>
         </div>
@@ -53,42 +28,16 @@
           <h3 class="text-center bg-light p-2">Galeri Foto</h3>
           <div class="container">
             <div class="row">
+              @foreach ($galleries->slice(0,4) as $gallery)
               <div class="col-lg-6 col-sm-6">
-                <div class="card mb-2">
-                  <a href="https://images.unsplash.com/photo-1570780728980-63f5a30a1393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-                    class="fancybox" data-fancybox="gallery1">
-                    <img
-                      src="https://images.unsplash.com/photo-1570780728980-63f5a30a1393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-                      class="card-img-top res" alt="..." />
-                  </a>
-                </div>
-                <div class="card mb-2">
-                  <a href="https://images.unsplash.com/photo-1570780728980-63f5a30a1393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-                    class="fancybox" data-fancybox="gallery1">
-                    <img
-                      src="https://images.unsplash.com/photo-1570780728980-63f5a30a1393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-                      class="card-img-top res" alt="..." />
+                <div class="card mb-2" style="height: 100px">
+                  <a href="{{ Storage::url($gallery->image) }}" class="fancybox" data-fancybox="gallery1">
+                    <img src="{{ Storage::url($gallery->image) }}" class="card-img-top res" alt="..."
+                      style="height: 100px" />
                   </a>
                 </div>
               </div>
-              <div class="col-lg-6 col-sm-6">
-                <div class="card mb-2">
-                  <a href="https://images.unsplash.com/photo-1570780728980-63f5a30a1393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-                    class="fancybox" data-fancybox="gallery1">
-                    <img
-                      src="https://images.unsplash.com/photo-1570780728980-63f5a30a1393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-                      class="card-img-top res" alt="..." />
-                  </a>
-                </div>
-                <div class="card mb-2">
-                  <a href="https://images.unsplash.com/photo-1570780728980-63f5a30a1393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-                    class="fancybox" data-fancybox="gallery1">
-                    <img
-                      src="https://images.unsplash.com/photo-1570780728980-63f5a30a1393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-                      class="card-img-top res" alt="..." />
-                  </a>
-                </div>
-              </div>
+              @endforeach
             </div>
           </div>
         </div>

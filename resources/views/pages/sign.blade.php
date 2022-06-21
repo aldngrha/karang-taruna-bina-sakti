@@ -16,42 +16,16 @@
           <h3 class="text-center bg-light p-2">Galeri Foto</h3>
           <div class="container">
             <div class="row">
+              @foreach ($galleries->slice(0,4) as $gallery)
               <div class="col-lg-6 col-sm-6">
-                <div class="card mb-2">
-                  <a href="https://images.unsplash.com/photo-1570780728980-63f5a30a1393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-                    class="fancybox" data-fancybox="gallery1">
-                    <img
-                      src="https://images.unsplash.com/photo-1570780728980-63f5a30a1393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-                      class="card-img-top res" alt="..." />
-                  </a>
-                </div>
-                <div class="card mb-2">
-                  <a href="https://images.unsplash.com/photo-1570780728980-63f5a30a1393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-                    class="fancybox" data-fancybox="gallery1">
-                    <img
-                      src="https://images.unsplash.com/photo-1570780728980-63f5a30a1393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-                      class="card-img-top res" alt="..." />
+                <div class="card mb-2" style="height: 100px">
+                  <a href="{{ Storage::url($gallery->image) }}" class="fancybox" data-fancybox="gallery1">
+                    <img src="{{ Storage::url($gallery->image) }}" class="card-img-top res" alt="..."
+                      style="height: 100px" />
                   </a>
                 </div>
               </div>
-              <div class="col-lg-6 col-sm-6">
-                <div class="card mb-2">
-                  <a href="https://images.unsplash.com/photo-1570780728980-63f5a30a1393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-                    class="fancybox" data-fancybox="gallery1">
-                    <img
-                      src="https://images.unsplash.com/photo-1570780728980-63f5a30a1393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-                      class="card-img-top res" alt="..." />
-                  </a>
-                </div>
-                <div class="card mb-2">
-                  <a href="https://images.unsplash.com/photo-1570780728980-63f5a30a1393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-                    class="fancybox" data-fancybox="gallery1">
-                    <img
-                      src="https://images.unsplash.com/photo-1570780728980-63f5a30a1393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-                      class="card-img-top res" alt="..." />
-                  </a>
-                </div>
-              </div>
+              @endforeach
             </div>
           </div>
         </div>

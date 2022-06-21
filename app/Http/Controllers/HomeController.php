@@ -12,7 +12,7 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         $sliders = Slider::all();
-        $articles = Article::all();
+        $articles = Article::paginate(6)->withQueryString();
         $galleries = Gallery::all();
 
         return view("pages.home", [
