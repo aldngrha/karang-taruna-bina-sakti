@@ -18,30 +18,24 @@
           <h3 class="text-primary text-uppercase">Artikel Terbaru</h3>
         </div>
         <hr class="divider">
+        @foreach ($items->slice(0,5) as $item)
         <div class="card-article">
           <div class="card-body">
             <div class="row no-gutters align-items-center">
               <div class="col-lg-3 mr-3">
-                <img
-                  src="https://images.unsplash.com/photo-1530878902700-5ad4f9e4c318?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1034&q=80"
-                  alt="" class="rounded" style="width: 250px;">
+                <img src="{{ Storage::url($item->image) }}" alt="" class="rounded" style="width: 250px;">
               </div>
               <div class="col">
                 <h5 class="text-dark card-title mt-3">
-                  Card title
+                  {{ $item->title }}
                 </h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero delectus ullam voluptatibus. Ipsum
-                  molestias nihil nemo illum explicabo, molestiae doloribus tempore cum nulla adipisci consequuntur,
-                  vitae
-                  ipsa, quibusdam in eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero delectus ullam
-                  voluptatibus. Ipsum
-                  molestias nihil nemo illum explicabo, molestiae doloribus tempore cum nulla adipisci </p> {{-- panjang
-                409 huruf --}}
+                <p>{!! substr($item->post, 0, 370) !!} </p>
 
               </div>
             </div>
           </div>
         </div>
+        @endforeach
       </div>
 
     </div>
