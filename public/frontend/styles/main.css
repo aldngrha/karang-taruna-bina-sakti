@@ -4,7 +4,7 @@ body {
 }
 
 .btn-primary {
-  background: #191919;
+  background: #191919 !important;
   border: none;
 }
 
@@ -149,6 +149,24 @@ body {
 .section-post .more-article h4 {
   margin-bottom: 20px;
   text-transform: uppercase;
+}
+
+.pagination li a {
+  color: #191919;
+}
+
+.pagination li span {
+  color: #191919;
+}
+
+.pagination .active a, .pagination .active:focus, .pagination .active:hover {
+  background-color: #191919 !important;
+  border-color: #191919 !important;
+}
+
+.pagination .active span, .pagination .active:focus, .pagination .active:hover {
+  background-color: #191919 !important;
+  border-color: #191919 !important;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
