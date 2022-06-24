@@ -19,10 +19,10 @@
       </a>
       <!-- Dropdown - User Information -->
       <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-        <button type="button" data-toggle="modal" data-target="#changePassword" class="dropdown-item">
+        <a href="{{ route('changePasswordGet') }}" class="dropdown-item">
           <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
           Ubah Password
-        </button>
+        </a>
         <form action="{{ route('logout') }}" method="POST">
           @csrf
           <button class="dropdown-item" type="submit">
@@ -34,26 +34,5 @@
     </li>
 
   </ul>
-
-  <!-- Modal -->
-  <div class="modal fade" id="changePassword" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ubah Password</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
 </nav>

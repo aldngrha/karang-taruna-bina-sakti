@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MemberController;
@@ -49,6 +50,14 @@ Route::prefix("admin")
         Route::get("/", [DashboardController::class, "index"])->name(
             "dashboard"
         );
+        Route::get("/change-password", [
+            ChangePasswordController::class,
+            "showChangePasswordGet",
+        ])->name("changePasswordGet");
+        Route::post("/change-password", [
+            ChangePasswordController::class,
+            "changePasswordPost",
+        ])->name("changePasswordPost");
         Route::resource("slider", "SliderController");
         Route::resource("article", "ArticleController");
         Route::resource("gallery", "GalleryController");
