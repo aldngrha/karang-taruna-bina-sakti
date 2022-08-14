@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\ProgramYearRequest;
 use App\Models\ProgramYear;
 use Illuminate\Http\Request;
 
@@ -29,7 +30,7 @@ class ProgramYearController extends Controller
      */
     public function create()
     {
-        //
+        return view("pages.admin.program-year.create");
     }
 
     /**
@@ -38,9 +39,12 @@ class ProgramYearController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProgramYearRequest $request)
     {
-        //
+        $data = $request->all();
+
+        ProgramYear::create($data);
+        return redirect()->route("program-year.index");
     }
 
     /**
@@ -72,7 +76,7 @@ class ProgramYearController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProgramYearRequest $request, $id)
     {
         //
     }

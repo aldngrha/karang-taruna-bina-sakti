@@ -20,11 +20,11 @@
 
   <div class="card shadow">
     <div class="card-body">
-      <form action="{{ route('program.store') }}" method="POST" enctype="multipart/form-data">
+      <form action="{{ route('program-year.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-          <label for="program-year">Tahun Program Kerja</label>
-          <input name="program-year" class="form-control" rows="10">{{ old("program_year") }}</input>
+          <label for="date">Tahun Program Kerja</label>
+          <input type="date" class="form-control" name="date" value="{{ old('date') }}">
         </div>
         <button type="submit" class="btn btn-primary btn-block">Simpan</button>
       </form>

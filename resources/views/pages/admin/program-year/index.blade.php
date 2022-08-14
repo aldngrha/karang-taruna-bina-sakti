@@ -28,7 +28,7 @@
                 @forelse ($items as $item)
                 <tr>
                   <td>{{ $item->id }}</td>
-                  <td>{!! substr($item->program, 0, 300) !!}</td>
+                  <td>{{ \Carbon\Carbon::parse($item->date)->isoFormat('dddd, D MMMM Y') }}</td>
                   <td>
                     <a href="{{ route('program-year.edit', $item->id) }}" class="btn btn-info">
                       <i class="fas fa-pencil-alt"></i>
