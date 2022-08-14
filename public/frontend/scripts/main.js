@@ -18,3 +18,17 @@ $(document).ready(function () {
     },
   });
 });
+
+document
+  .getElementById("agendaMenu")
+  .addEventListener("click", function (event) {
+    document.getElementById("agendaYears").classList.toggle("show");
+    event.stopPropagation();
+  });
+
+document
+  .getElementById("programMenu")
+  .addEventListener("click", function (event) {
+    document.getElementById("programYears").classList.toggle("show");
+    event.stopPropagation();
+  });

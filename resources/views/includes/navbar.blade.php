@@ -62,13 +62,26 @@
           <li class="nav-item dropdown mx-md-2">
             <a class="nav-link {{ request()->is('schedule', 'program', 'sign') ? 'active' : '' }} dropdown-toggle"
               id="navbardrop" data-toggle="dropdown">Kegiatan</a>
-            <div class="dropdown-menu">
-              <a href="{{ route('schedule') }}" class="dropdown-item">Agenda Karang Taruna</a>
+            <ul class="dropdown-menu">
+              <li class="nav-item dropdown">
+                <a class="dropdown-item dropdown-toggle" role="button" id="agendaMenu" data-toggle="collapse"
+                  data-target="#agendaYears">Agenda
+                  Karang Taruna</a>
+                <ul class="collapse" id="agendaYears">
+                  <a href="" class="dropdown-item">2010</a>
+                </ul>
+              </li>
               <div class="dropdown-divider"></div>
-              <a href="{{ route('program') }}" class="dropdown-item">Program Kerja</a>
+              <li class="nav-item dropdown">
+                <a class="dropdown-item dropdown-toggle" role="button" id="programMenu" data-toggle="collapse"
+                  data-target="#programYears">Program Kerja</a>
+                <ul class="collapse" id="programYears">
+                  <a href="" class="dropdown-item">2010</a>
+                </ul>
+              </li>
               <div class="dropdown-divider"></div>
               <a href="{{ route('sign') }}" class="dropdown-item">Pendaftaran</a>
-            </div>
+            </ul>
           </li>
           <li class="nav-item mx-md-2">
             <a class="nav-link" href="#contact">Kontak</a>
