@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAgendasTable extends Migration
+class CreateProgramYearsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateAgendasTable extends Migration
      */
     public function up()
     {
-        Schema::create("agendas", function (Blueprint $table) {
+        Schema::create("program_years", function (Blueprint $table) {
             $table->bigIncrements("id");
-            $table->integer("agenda_years_id");
-            $table->string("title");
-            $table->text("image");
+            $table->date("date");
             $table->softDeletes();
             $table->timestamps();
         });
@@ -30,6 +28,6 @@ class CreateAgendasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists("agendas");
+        Schema::dropIfExists("program-years");
     }
 }

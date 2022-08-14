@@ -79,17 +79,32 @@
   </li>
 
   <!-- Nav Item - Strukturisasi Collapse Menu -->
-  <li class="nav-item {{ request()->is('admin/agenda*', 'admin/program*') ? 'active' : '' }}">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse" aria-expanded="true"
+  <li class="nav-item {{ request()->is('admin/agenda*', 'admin/tahun-agenda*') ? 'active' : '' }}">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAgenda" aria-expanded="true"
       aria-controls="collapseUtilities">
       <i class="fas fa-calendar-check"></i>
-      <span>Kegiatan</span>
+      <span>Agenda</span>
     </a>
-    <div id="collapse" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+    <div id="collapseAgenda" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
-        <h6 class="collapse-header">Kegiatan :</h6>
-        <a class="collapse-item" href="{{ route('agenda.index') }}">Agenda</a>
-        <a class="collapse-item" href="{{ route('program.index') }}">Program Kerja</a>
+        <h6 class="collapse-header">Agenda :</h6>
+        {{-- <a class="collapse-item" href="{{ route('agenda-year.index') }}">Tahun</a> --}}
+        <a class="collapse-item" href="{{ route('agenda.index') }}">Daftar Agenda</a>
+      </div>
+    </div>
+  </li>
+
+  <li class="nav-item {{ request()->is('admin/program*', 'admin/tahun-program*') ? 'active' : '' }}">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProgram" aria-expanded="true"
+      aria-controls="collapseUtilities">
+      <i class="fas fa-program"></i>
+      <span>Program Kerja</span>
+    </a>
+    <div id="collapseProgram" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <h6 class="collapse-header">Program Kerja :</h6>
+        <a class="collapse-item" href="{{ route('program-year.index') }}">Tahun</a>
+        <a class="collapse-item" href="{{ route('program.index') }}">Daftar Program</a>
       </div>
     </div>
   </li>

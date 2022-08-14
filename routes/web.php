@@ -66,6 +66,7 @@ Route::prefix("admin")
         Route::resource("structure", "OrganizationalStructureController");
         Route::resource("agenda", "AgendaController");
         Route::resource("program", "ProgramController");
+        Route::resource("program-year", "ProgramYearController");
     });
 
 Auth::routes(["verify" => true]);

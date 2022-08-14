@@ -7,7 +7,7 @@
       <div class="row">
         <div class="col-md-8 col-sm-6 mb-4">
           <h3 class="mb-4">Agenda Karang Taruna</h3>
-          <h5 class="mb-4">Agenda yang akan dilakukan pada tahun ini :</h5>
+          <h5 class="mb-4">Agenda yang dilakukan pada tahun :</h5>
           <div class="container">
             <div class="row">
               @foreach ($agendas as $agenda)
