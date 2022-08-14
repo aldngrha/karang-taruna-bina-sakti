@@ -31,42 +31,41 @@ Route::get("/", [HomeController::class, "index"])->name("home");
 Route::get("/schedule", [ScheduleController::class, "index"])->name("schedule");
 Route::get("/sign", [SignController::class, "index"])->name("sign");
 Route::get("/structure", [StructureController::class, "index"])->name(
-    "structure"
+  "structure"
 );
 Route::get("/vision", [VisionController::class, "index"])->name("vision");
 Route::get("/member", [MemberController::class, "index"])->name("member");
 Route::get("/history", [HistoryController::class, "index"])->name("history");
 Route::get("/program", [ProgramController::class, "index"])->name("program");
 Route::get("/single-post/{slug}", [SinglePostController::class, "index"])->name(
-    "single-post"
+  "single-post"
 );
 
 // Route admin
 
 Route::prefix("admin")
-    ->namespace("Admin")
-    ->middleware(["auth", "admin"])
-    ->group(function () {
-        Route::get("/", [DashboardController::class, "index"])->name(
-            "dashboard"
-        );
-        Route::get("/change-password", [
-            ChangePasswordController::class,
-            "showChangePasswordGet",
-        ])->name("changePasswordGet");
-        Route::post("/change-password", [
-            ChangePasswordController::class,
-            "changePasswordPost",
-        ])->name("changePasswordPost");
-        Route::resource("slider", "SliderController");
-        Route::resource("article", "ArticleController");
-        Route::resource("gallery", "GalleryController");
-        Route::resource("vision", "VisionController");
-        Route::resource("history", "HistoryController");
-        Route::resource("structure", "OrganizationalStructureController");
-        Route::resource("agenda", "AgendaController");
-        Route::resource("program", "ProgramController");
-        Route::resource("program-year", "ProgramYearController");
-    });
+  ->namespace("Admin")
+  ->middleware(["auth", "admin"])
+  ->group(function () {
+    Route::get("/", [DashboardController::class, "index"])->name("dashboard");
+    Route::get("/change-password", [
+      ChangePasswordController::class,
+      "showChangePasswordGet",
+    ])->name("changePasswordGet");
+    Route::post("/change-password", [
+      ChangePasswordController::class,
+      "changePasswordPost",
+    ])->name("changePasswordPost");
+    Route::resource("slider", "SliderController");
+    Route::resource("article", "ArticleController");
+    Route::resource("gallery", "GalleryController");
+    Route::resource("vision", "VisionController");
+    Route::resource("history", "HistoryController");
+    Route::resource("structure", "OrganizationalStructureController");
+    Route::resource("agenda", "AgendaController");
+    Route::resource("agenda-year", "AgendaYearController");
+    Route::resource("program", "ProgramController");
+    Route::resource("program-year", "ProgramYearController");
+  });
 
 Auth::routes(["verify" => true]);

@@ -8,10 +8,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Agenda extends Model
 {
-    use HasFactory;
-    use SoftDeletes;
+  use HasFactory;
+  use SoftDeletes;
 
-    protected $fillable = ["title", "image"];
+  protected $fillable = ["agenda_years_id", "title", "image"];
 
-    protected $hidden = [];
+  protected $hidden = [];
+
+  public function agenda_year()
+  {
+    return $this->belongsTo(AgendaYear::class, "agenda_years_id", "id");
+  }
 }

@@ -27,6 +27,15 @@ Ubah Gallery
       <form action="{{ route('agenda.update', $item->id) }}" method="POST" enctype="multipart/form-data">
         @method('PUT')
         @csrf
+        <label for="agenda_years_id">Penanggalan Agenda Kerja</label>
+        <select name="agenda_years_id" required class="form-control">
+          <option value="{{ $item->agenda_years_id }}">Ubah penanggalan</option>
+          @foreach ($agenda_years as $agenda_year)
+          <option value="{{ $agenda_year->id }}">
+            {{ \Carbon\Carbon::parse($agenda_year->date)->isoFormat('dddd, D MMMM Y') }}
+          </option>
+          @endforeach
+        </select>
         <div class="form-group">
           <label for="title">Judul</label>
           <input type="text" class="form-control" name="title" placeholder="Judul Artikel" value="{{ $item->title }}">

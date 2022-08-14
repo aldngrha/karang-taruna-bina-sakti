@@ -5,9 +5,9 @@
 
   <!-- Page Heading -->
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Agenda</h1>
-    <a href="{{ route('agenda.create') }}" class="btn btn-primary shadow-sm">
-      <i class="fas fa-plus fa-sm text-white"></i> Tambah Agenda
+    <h1 class="h3 mb-0 text-gray-800">Penanggalan Agenda</h1>
+    <a href="{{ route('agenda-year.create') }}" class="btn btn-primary shadow-sm">
+      <i class="fas fa-plus fa-sm text-white"></i> Tambah Penanggalan Agenda
     </a>
   </div>
 
@@ -20,8 +20,7 @@
               <thead>
                 <tr>
                   <th scope="col">ID</th>
-                  <th scope="col">Judul</th>
-                  <th scope="col">Gambar</th>
+                  <th scope="col">Penanggalan Agenda</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>
@@ -29,15 +28,12 @@
                 @forelse ($items as $item)
                 <tr>
                   <td>{{ $item->id }}</td>
-                  <td>{{ $item->title }}</td>
+                  <td>{{ \Carbon\Carbon::parse($item->date)->isoFormat('dddd, D MMMM Y') }}</td>
                   <td>
-                    <img src="{{ Storage::url($item->image) }}" class="img-thumbnail" style="width: 150px;">
-                  </td>
-                  <td>
-                    <a href="{{ route('agenda.edit', $item->id) }}" class="btn btn-info">
+                    <a href="{{ route('agenda-year.edit', $item->id) }}" class="btn btn-info">
                       <i class="fas fa-pencil-alt"></i>
                     </a>
-                    <form action="{{ route('agenda.destroy', $item->id) }}" class="d-inline" method="POST">
+                    <form action="{{ route('agenda-year.destroy', $item->id) }}" class="d-inline" method="POST">
                       @csrf
                       @method('delete')
                       <button class="btn btn-danger">

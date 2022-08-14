@@ -20,6 +20,7 @@
               <thead>
                 <tr>
                   <th scope="col">ID</th>
+                  <th scope="col">Penanggalan Agenda</th>
                   <th scope="col">Judul</th>
                   <th scope="col">Gambar</th>
                   <th scope="col">Action</th>
@@ -29,6 +30,7 @@
                 @forelse ($items as $item)
                 <tr>
                   <td>{{ $item->id }}</td>
+                  <td>{{ \Carbon\Carbon::parse($item->agenda_year->date)->isoFormat('dddd, D MMMM Y') }}</td>
                   <td>{{ $item->title }}</td>
                   <td>
                     <img src="{{ Storage::url($item->image) }}" class="img-thumbnail" style="width: 150px;">

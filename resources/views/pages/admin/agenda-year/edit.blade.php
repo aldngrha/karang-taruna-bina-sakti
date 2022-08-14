@@ -9,7 +9,7 @@ Ubah Gallery
 <div class="container-fluid">
   <!-- Page Heading -->
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Ubah Agenda {{ $item->title }}</h1>
+    <h1 class="h3 mb-0 text-gray-800">Ubah Penanggalan Agenda</h1>
   </div>
 
   @if ($errors->any())
@@ -24,20 +24,12 @@ Ubah Gallery
 
   <div class="card shadow">
     <div class="card-body">
-      <form action="{{ route('agenda.update', $item->id) }}" method="POST" enctype="multipart/form-data">
+      <form action="{{ route('agenda-year.update', $item->id) }}" method="POST" enctype="multipart/form-data">
         @method('PUT')
         @csrf
         <div class="form-group">
-          <label for="title">Judul</label>
-          <input type="text" class="form-control" name="title" placeholder="Judul Artikel" value="{{ $item->title }}">
-        </div>
-        <div class="form-group">
-          <label>Gambar</label>
-          <div class="custom-file">
-            <input type="file" name="image" class="custom-file-input" id="inputGroupFile03"
-              aria-describedby="inputGroupFileAddon03">
-            <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
-          </div>
+          <label for="date">Penanggalan Agenda</label>
+          <input type="date" class="form-control" name="date" value="{{ $item->date }}">
         </div>
         <button type="submit" class="btn btn-primary btn-block">Simpan</button>
       </form>

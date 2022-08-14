@@ -8,10 +8,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class AgendaYear extends Model
 {
-    use HasFactory;
-    use SoftDeletes;
+  use HasFactory;
+  use SoftDeletes;
 
-    protected $fillable = ["date"];
+  protected $fillable = ["date"];
 
-    protected $hidden = [];
+  protected $hidden = [];
+
+  public function programs()
+  {
+    return $this->hasMany(Agenda::class, "agenda_years_id", "id");
+  }
 }

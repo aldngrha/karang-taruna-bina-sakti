@@ -88,7 +88,7 @@
     <div id="collapseAgenda" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Agenda :</h6>
-        {{-- <a class="collapse-item" href="{{ route('agenda-year.index') }}">Tahun</a> --}}
+        <a class="collapse-item" href="{{ route('agenda-year.index') }}">Penanggalan Agenda</a>
         <a class="collapse-item" href="{{ route('agenda.index') }}">Daftar Agenda</a>
       </div>
     </div>
@@ -97,13 +97,13 @@
   <li class="nav-item {{ request()->is('admin/program*', 'admin/tahun-program*') ? 'active' : '' }}">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProgram" aria-expanded="true"
       aria-controls="collapseUtilities">
-      <i class="fas fa-program"></i>
+      <i class="fas fa-briefcase"></i>
       <span>Program Kerja</span>
     </a>
     <div id="collapseProgram" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Program Kerja :</h6>
-        <a class="collapse-item" href="{{ route('program-year.index') }}">Tahun</a>
+        <a class="collapse-item" href="{{ route('program-year.index') }}">Penanggalan Program</a>
         <a class="collapse-item" href="{{ route('program.index') }}">Daftar Program</a>
       </div>
     </div>

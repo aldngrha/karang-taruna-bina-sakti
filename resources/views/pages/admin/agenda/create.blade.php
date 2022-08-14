@@ -23,6 +23,17 @@
       <form action="{{ route('agenda.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
+          <label for="agenda_years_id">Penanggalan Agenda</label>
+          <select name="agenda_years_id" required class="form-control">
+            <option value="">Pilih Tanggal Agenda</option>
+            @foreach ($agenda_years as $agenda_year)
+            <option value="{{ $agenda_year->id }}">
+              {{ \Carbon\Carbon::parse($agenda_year->date)->isoFormat('dddd, D MMMM Y') }}
+            </option>
+            @endforeach
+          </select>
+        </div>
+        <div class="form-group">
           <label for="title">Judul</label>
           <input type="text" class="form-control" name="title" placeholder="Nama Kegiatan" value="{{ old('title') }}">
         </div>
