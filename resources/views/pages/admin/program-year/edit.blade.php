@@ -9,7 +9,7 @@ Ubah Gallery
 <div class="container-fluid">
   <!-- Page Heading -->
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Ubah Program Kerja</h1>
+    <h1 class="h3 mb-0 text-gray-800">Ubah Tahun Program Kerja</h1>
   </div>
 
   @if ($errors->any())
@@ -24,12 +24,12 @@ Ubah Gallery
 
   <div class="card shadow">
     <div class="card-body">
-      <form action="{{ route('program.update', $item->id) }}" method="POST" enctype="multipart/form-data">
+      <form action="{{ route('program-year.update', $item->id) }}" method="POST" enctype="multipart/form-data">
         @method('PUT')
         @csrf
         <div class="form-group">
-          <label for="program">Program Kerja</label>
-          <textarea name="program" class="ckeditor form-control" rows="10">{{ $item->program }}</textarea>
+          <label for="date">Penanggalan Program Kerja</label>
+          <input type="date" class="form-control" name="date" value="{{ $item->date }}">
         </div>
         <button type="submit" class="btn btn-primary btn-block">Simpan</button>
       </form>

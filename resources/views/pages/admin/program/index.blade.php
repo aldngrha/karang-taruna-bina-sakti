@@ -6,11 +6,9 @@
   <!-- Page Heading -->
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Program Kerja</h1>
-    @if ($items->isEmpty())
     <a href="{{ route('program.create') }}" class="btn btn-primary shadow-sm">
-      <i class="fas fa-plus fa-sm text-white"></i> Tambah Program
+      <i class="fas fa-plus fa-sm text-white"></i> Tambah Program Kerja
     </a>
-    @endif
   </div>
 
   <div class="row">
@@ -22,7 +20,8 @@
               <thead>
                 <tr>
                   <th scope="col">ID</th>
-                  <th scope="col">Program</th>
+                  <th scope="col">Penanggalan Program Kerja</th>
+                  <th scope="col">Program Kerja</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>
@@ -30,6 +29,7 @@
                 @forelse ($items as $item)
                 <tr>
                   <td>{{ $item->id }}</td>
+                  <td>{{ \Carbon\Carbon::parse($item->program_year->date)->isoFormat('dddd, D MMMM Y') }}</td>
                   <td>{!! substr($item->program, 0, 300) !!}</td>
                   <td>
                     <a href="{{ route('program.edit', $item->id) }}" class="btn btn-info">

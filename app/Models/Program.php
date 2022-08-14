@@ -8,10 +8,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Program extends Model
 {
-    use HasFactory;
-    use SoftDeletes;
+  use HasFactory;
+  use SoftDeletes;
 
-    protected $fillable = ["program"];
+  protected $fillable = ["program_years_id", "program"];
 
-    protected $hidden = [];
+  protected $hidden = [];
+
+  public function program_year()
+  {
+    return $this->belongsTo(ProgramYear::class, "program_years_id", "id");
+  }
 }

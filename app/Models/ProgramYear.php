@@ -2,17 +2,21 @@
 
 namespace App\Models;
 
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class ProgramYear extends Model
 {
-    use HasFactory;
-    use SoftDeletes;
+  use HasFactory;
+  use SoftDeletes;
 
-    protected $fillable = ["date"];
+  protected $fillable = ["date"];
 
-    protected $hidden = [];
+  protected $hidden = [];
+
+  public function programs()
+  {
+    return $this->hasMany(Program::class, "program_years_id", "id");
+  }
 }

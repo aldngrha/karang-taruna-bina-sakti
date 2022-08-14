@@ -7,7 +7,7 @@
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Tahun Program Kerja</h1>
     <a href="{{ route('program-year.create') }}" class="btn btn-primary shadow-sm">
-      <i class="fas fa-plus fa-sm text-white"></i> Tambah Tahun Program Kerja
+      <i class="fas fa-plus fa-sm text-white"></i> Tambah Penanggalan Program Kerja
     </a>
   </div>
 
@@ -20,7 +20,7 @@
               <thead>
                 <tr>
                   <th scope="col">ID</th>
-                  <th scope="col">Tahun Program</th>
+                  <th scope="col">Penanggalan Program Kerja</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>

@@ -27,6 +27,15 @@ Ubah Gallery
       <form action="{{ route('program.update', $item->id) }}" method="POST" enctype="multipart/form-data">
         @method('PUT')
         @csrf
+        <label for="program_years_id">Penanggalan Program Kerja</label>
+        <select name="program_years_id" required class="form-control">
+          <option value="{{ $item->program_years_id }}">Ubah penanggalan</option>
+          @foreach ($program_years as $program_year)
+          <option value="{{ $program_year->id }}">
+            {{ \Carbon\Carbon::parse($program_year->date)->isoFormat('dddd, D MMMM Y') }}
+          </option>
+          @endforeach
+        </select>
         <div class="form-group">
           <label for="program">Program Kerja</label>
           <textarea name="program" class="ckeditor form-control" rows="10">{{ $item->program }}</textarea>
