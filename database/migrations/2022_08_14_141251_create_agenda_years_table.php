@@ -6,28 +6,29 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateAgendaYearsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create("agenda_years", function (Blueprint $table) {
-            $table->bigIncrements("id");
-            $table->date("date");
-            $table->softDeletes();
-            $table->timestamps();
-        });
-    }
+  /**
+   * Run the migrations.
+   *
+   * @return void
+   */
+  public function up()
+  {
+    Schema::create("agenda_years", function (Blueprint $table) {
+      $table->bigIncrements("id");
+      $table->string("year");
+      $table->string("slug");
+      $table->softDeletes();
+      $table->timestamps();
+    });
+  }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists("agenda-years");
-    }
+  /**
+   * Reverse the migrations.
+   *
+   * @return void
+   */
+  public function down()
+  {
+    Schema::dropIfExists("agenda-years");
+  }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\AgendaYearRequest;
 use App\Models\AgendaYear;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class AgendaYearController extends Controller
@@ -42,6 +43,7 @@ class AgendaYearController extends Controller
   public function store(AgendaYearRequest $request)
   {
     $data = $request->all();
+    $data["slug"] = Str::slug($request->year);
 
     AgendaYear::create($data);
     return redirect()->route("agenda-year.index");
@@ -83,6 +85,7 @@ class AgendaYearController extends Controller
   public function update(AgendaYearRequest $request, $id)
   {
     $data = $request->all();
+    $data["slug"] = Str::slug($request->year);
 
     $item = AgendaYear::findOrFail($id);
     $item->update($data);

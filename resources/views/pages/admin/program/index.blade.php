@@ -21,6 +21,7 @@
                 <tr>
                   <th scope="col">ID</th>
                   <th scope="col">Penanggalan Program Kerja</th>
+                  <th scope="col">Tahun Program Kerja</th>
                   <th scope="col">Program Kerja</th>
                   <th scope="col">Action</th>
                 </tr>
@@ -29,7 +30,8 @@
                 @forelse ($items as $item)
                 <tr>
                   <td>{{ $item->id }}</td>
-                  <td>{{ \Carbon\Carbon::parse($item->program_year->date)->isoFormat('dddd, D MMMM Y') }}</td>
+                  <td>{{ \Carbon\Carbon::parse($item->date)->isoFormat('dddd, D MMMM') }}</td>
+                  <td>{{ $item->program_year->year }}</td>
                   <td>{!! substr($item->program, 0, 300) !!}</td>
                   <td>
                     <a href="{{ route('program.edit', $item->id) }}" class="btn btn-info">

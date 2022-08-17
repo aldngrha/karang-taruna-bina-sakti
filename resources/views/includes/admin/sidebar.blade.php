@@ -88,7 +88,7 @@
     <div id="collapseAgenda" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Agenda :</h6>
-        <a class="collapse-item" href="{{ route('agenda-year.index') }}">Penanggalan Agenda</a>
+        <a class="collapse-item" href="{{ route('agenda-year.index') }}">Tahun Agenda</a>
         <a class="collapse-item" href="{{ route('agenda.index') }}">Daftar Agenda</a>
       </div>
     </div>
@@ -103,7 +103,7 @@
     <div id="collapseProgram" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Program Kerja :</h6>
-        <a class="collapse-item" href="{{ route('program-year.index') }}">Penanggalan Program</a>
+        <a class="collapse-item" href="{{ route('program-year.index') }}">Tahun Program Kerja</a>
         <a class="collapse-item" href="{{ route('program.index') }}">Daftar Program</a>
       </div>
     </div>

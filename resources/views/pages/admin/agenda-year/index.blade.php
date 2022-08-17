@@ -5,9 +5,9 @@
 
   <!-- Page Heading -->
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Penanggalan Agenda</h1>
+    <h1 class="h3 mb-0 text-gray-800">Tahun Agenda</h1>
     <a href="{{ route('agenda-year.create') }}" class="btn btn-primary shadow-sm">
-      <i class="fas fa-plus fa-sm text-white"></i> Tambah Penanggalan Agenda
+      <i class="fas fa-plus fa-sm text-white"></i> Tambah Tahun Agenda
     </a>
   </div>
 
@@ -20,7 +20,7 @@
               <thead>
                 <tr>
                   <th scope="col">ID</th>
-                  <th scope="col">Penanggalan Agenda</th>
+                  <th scope="col">Tahun</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>
@@ -28,7 +28,7 @@
                 @forelse ($items as $item)
                 <tr>
                   <td>{{ $item->id }}</td>
-                  <td>{{ \Carbon\Carbon::parse($item->date)->isoFormat('dddd, D MMMM Y') }}</td>
+                  <td>{{ $item->year }}</td>
                   <td>
                     <a href="{{ route('agenda-year.edit', $item->id) }}" class="btn btn-info">
                       <i class="fas fa-pencil-alt"></i>

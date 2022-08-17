@@ -11,11 +11,11 @@ class AgendaYear extends Model
   use HasFactory;
   use SoftDeletes;
 
-  protected $fillable = ["date"];
+  protected $fillable = ["year", "slug"];
 
   protected $hidden = [];
 
-  public function programs()
+  public function agendas()
   {
     return $this->hasMany(Agenda::class, "agenda_years_id", "id");
   }

@@ -11,7 +11,7 @@ class Program extends Model
   use HasFactory;
   use SoftDeletes;
 
-  protected $fillable = ["program_years_id", "program"];
+  protected $fillable = ["program_years_id", "date", "program"];
 
   protected $hidden = [];
 

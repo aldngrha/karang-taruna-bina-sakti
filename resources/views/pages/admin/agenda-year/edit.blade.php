@@ -28,8 +28,8 @@ Ubah Gallery
         @method('PUT')
         @csrf
         <div class="form-group">
-          <label for="date">Penanggalan Agenda</label>
-          <input type="date" class="form-control" name="date" value="{{ $item->date }}">
+          <label for="year">Tahun Agenda</label>
+          <input type="text" class="form-control" name="year" value="{{ $item->year }}">
         </div>
         <button type="submit" class="btn btn-primary btn-block">Simpan</button>
       </form>

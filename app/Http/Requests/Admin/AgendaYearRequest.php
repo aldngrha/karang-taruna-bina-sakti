@@ -24,7 +24,7 @@ class AgendaYearRequest extends FormRequest
   public function rules()
   {
     return [
-      "date" => "required|date",
+      "year" => "required|max:255",
     ];
   }
 }

@@ -26,6 +26,7 @@ class AgendaRequest extends FormRequest
     return [
       "agenda_years_id" => "required|integer|exists:agenda_years,id",
       "title" => "required|max:255",
+      "date" => "required|date",
       "image" => "required",
     ];
   }

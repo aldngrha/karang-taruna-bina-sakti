@@ -68,7 +68,11 @@
                   data-target="#agendaYears">Agenda
                   Karang Taruna</a>
                 <ul class="collapse" id="agendaYears">
-                  <a href="" class="dropdown-item">2010</a>
+                  @foreach ($years as $item)
+                  <a href="{{ route('schedule', $item->slug) }}" class="dropdown-item">{{
+                    $item->year
+                    }}</a>
+                  @endforeach
                 </ul>
               </li>
               <div class="dropdown-divider"></div>
@@ -76,7 +80,10 @@
                 <a class="dropdown-item dropdown-toggle" role="button" id="programMenu" data-toggle="collapse"
                   data-target="#programYears">Program Kerja</a>
                 <ul class="collapse" id="programYears">
-                  <a href="" class="dropdown-item">2010</a>
+                  @foreach ($dates as $program)
+                  <a href="{{ route('program', $program->slug) }}" class="dropdown-item">{{ $program->year
+                    }}</a>
+                  @endforeach
                 </ul>
               </li>
               <div class="dropdown-divider"></div>

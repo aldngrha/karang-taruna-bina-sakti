@@ -25,6 +25,7 @@ class ProgramRequest extends FormRequest
   {
     return [
       "program_years_id" => "required|integer|exists:program_years,id",
+      "date" => "required|date",
       "program" => "required",
     ];
   }

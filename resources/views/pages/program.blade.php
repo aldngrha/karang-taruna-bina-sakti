@@ -7,12 +7,14 @@
       <div class="row">
         <div class="col-md-8 col-sm-6 mb-4">
           <h3 class="mb-4">Program Karang Taruna</h3>
-          <h5 class="mb-4">Program Kerja yang dilakukan pada :</h5>
-          @foreach ($programs as $program)
+          <h5 class="mb-4">Program Kerja yang dilakukan pada {{ $programs->year }} :</h5>
+          @forelse ($programs->programs as $program)
           <p class="visi-text">
             {!! $program->program !!}
           </p>
-          @endforeach
+          @empty
+          <p>Tidak ada program kerja</p>
+          @endforelse
         </div>
         <div class="col-md-4 col-sm-6">
           <h3 class="text-center bg-light p-2">Galeri Foto</h3>

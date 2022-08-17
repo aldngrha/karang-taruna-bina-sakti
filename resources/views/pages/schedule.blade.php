@@ -7,20 +7,25 @@
       <div class="row">
         <div class="col-md-8 col-sm-6 mb-4">
           <h3 class="mb-4">Agenda Karang Taruna</h3>
-          <h5 class="mb-4">Agenda yang dilakukan pada tahun :</h5>
+          <h5 class="mb-4">Agenda yang dilakukan pada tahun {{ $items->year }}:</h5>
           <div class="container">
             <div class="row">
-              @foreach ($agendas as $agenda)
+              @forelse ($items->agendas as $item)
               <div class="col-md-6 col-sm-6">
                 <div class="card text-center mb-3" style="width: 350px;">
-                  <img class="card-img-top" src="{{ Storage::url($agenda->image) }}" alt="Card image cap"
+                  <img class="card-img-top" src="{{ Storage::url($item->image) }}" alt="Card image cap"
                     style="height: 200px" />
                   <div class="card-body">
-                    <h5 class="card-title">{{ $agenda->title }}</h5>
+                    <h5 class="card-title">{{ $item->title }}</h5>
+                    <h5 class="card-title">{{ \Carbon\Carbon::parse($item->date)->isoFormat('dddd, D
+                      MMMM')
+                      }}</h5>
                   </div>
                 </div>
               </div>
-              @endforeach
+              @empty
+              <p>Tidak ada kegiatan</p>
+              @endforelse
             </div>
           </div>
         </div>

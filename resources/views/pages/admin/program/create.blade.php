@@ -23,12 +23,16 @@
       <form action="{{ route('program.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-          <label for="program_years_id">Penanggalan Program Kerja</label>
+          <label for="date">Penanggalan Program Kerja</label>
+          <input type="date" class="form-control" name="date" value="{{ old('date') }}">
+        </div>
+        <div class="form-group">
+          <label for="program_years_id">Tahun Program Kerja</label>
           <select name="program_years_id" required class="form-control">
-            <option value="">Pilih Tanggal Program Kerja</option>
+            <option value="">Pilih Tahun Program Kerja</option>
             @foreach ($program_years as $program_year)
             <option value="{{ $program_year->id }}">
-              {{ \Carbon\Carbon::parse($program_year->date)->isoFormat('dddd, D MMMM Y') }}
+              {{ $program_year->year }}
             </option>
             @endforeach
           </select>

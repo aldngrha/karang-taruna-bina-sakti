@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ProgramYearRequest;
 use App\Models\ProgramYear;
@@ -42,6 +43,7 @@ class ProgramYearController extends Controller
   public function store(ProgramYearRequest $request)
   {
     $data = $request->all();
+    $data["slug"] = Str::slug($request->year);
 
     ProgramYear::create($data);
     return redirect()->route("program-year.index");
@@ -83,6 +85,7 @@ class ProgramYearController extends Controller
   public function update(ProgramYearRequest $request, $id)
   {
     $data = $request->all();
+    $data["slug"] = Str::slug($request->year);
 
     $item = ProgramYear::findOrFail($id);
     $item->update($data);

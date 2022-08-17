@@ -11,7 +11,6 @@
 
 <body>
   <!-- Topbar -->
-  @include('includes.navbar-alternate')
 
   @yield('content')
 

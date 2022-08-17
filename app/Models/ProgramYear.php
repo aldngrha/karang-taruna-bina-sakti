@@ -11,7 +11,7 @@ class ProgramYear extends Model
   use HasFactory;
   use SoftDeletes;
 
-  protected $fillable = ["date"];
+  protected $fillable = ["year", "slug"];
 
   protected $hidden = [];
 

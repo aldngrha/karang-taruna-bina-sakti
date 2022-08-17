@@ -5,7 +5,7 @@
 
   <!-- Page Heading -->
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Tambah Penanggalan Agenda</h1>
+    <h1 class="h3 mb-0 text-gray-800">Tambah Tahun Agenda</h1>
   </div>
 
   @if ($errors->any())
@@ -23,8 +23,8 @@
       <form action="{{ route('agenda-year.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-          <label for="date">Penanggalan Agenda</label>
-          <input type="date" class="form-control" name="date" value="{{ old('date') }}">
+          <label for="year">Tahun Agenda</label>
+          <input type="text" class="form-control" name="year" value="{{ old('year') }}">
         </div>
         <button type="submit" class="btn btn-primary btn-block">Simpan</button>
       </form>

@@ -28,7 +28,9 @@ use Illuminate\Support\Facades\Route;
 // Route user
 
 Route::get("/", [HomeController::class, "index"])->name("home");
-Route::get("/schedule", [ScheduleController::class, "index"])->name("schedule");
+Route::get("/schedule/{slug}", [ScheduleController::class, "index"])->name(
+  "schedule"
+);
 Route::get("/sign", [SignController::class, "index"])->name("sign");
 Route::get("/structure", [StructureController::class, "index"])->name(
   "structure"
@@ -36,7 +38,9 @@ Route::get("/structure", [StructureController::class, "index"])->name(
 Route::get("/vision", [VisionController::class, "index"])->name("vision");
 Route::get("/member", [MemberController::class, "index"])->name("member");
 Route::get("/history", [HistoryController::class, "index"])->name("history");
-Route::get("/program", [ProgramController::class, "index"])->name("program");
+Route::get("/program/{slug}", [ProgramController::class, "index"])->name(
+  "program"
+);
 Route::get("/single-post/{slug}", [SinglePostController::class, "index"])->name(
   "single-post"
 );

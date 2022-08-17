@@ -11,7 +11,7 @@ class Agenda extends Model
   use HasFactory;
   use SoftDeletes;
 
-  protected $fillable = ["agenda_years_id", "title", "image"];
+  protected $fillable = ["agenda_years_id", "title", "date", "image"];
 
   protected $hidden = [];
 
